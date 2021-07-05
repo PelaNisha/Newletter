@@ -7,14 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Choose a format</h2>
-     <li> 
-            <a href="01">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-        
-    </li> 
+    <h1>Add news</h1>
+    <form action="" method="POST">
+        {%csrf_token%}
+        {{forms.as_p}}
+        <button>Post</button>
+    </form>
     <a href="{% url 'home' %}">Back to home</a>
 </body>
 </html>
