@@ -7,23 +7,40 @@
     <title>Home</title>
 </head>
 <body>
-    <h3>NewLetter for me **</h3>
-    {% for post in object_list %}
-        
-            <h4><a href="{% url 'news_detail' post.pk %}">{{post.title}}</a></h4>
-            <small>{{post.body}}</small>
-        
-    {% endfor%}
-    
-        
-    <a  id="addpost" href="{% url 'addnews' %}">Add a Post</a>
+    <div class="outer_container">
+        <div class="container">
+            <h3>NewLetter for me **</h3>
+            {% for post in object_list %}
+                
+                    <h4><a href="{% url 'news_detail' post.pk %}">{{post.title}}</a></h4>
+                    <small>{{post.body}}</small>
+                
+            {% endfor%}
+            
+                
+            <a  id="addpost" href="{% url 'addnews' %}">Add a Post</a>
+        </div>
+    </div>  
 
-    
     <style>
         #addpost{
             position: fixed;
-            top: 5%;
-            right: 5%;
+            top: 10%;
+            right: 30%;
+        }
+
+        .container{
+            border: solid rgb(49, 0, 128) 3px;
+            margin: 40px 350px auto; 
+            background-color: rgb(241, 211, 211);
+           
+        }
+        .outer_container{
+            border: double rgb(33, 40, 105) 3px;
+            margin: 10px 30px auto; 
+
+            background-color: rgb(255, 198, 198);
+            
         }
     </style>
 </body>
