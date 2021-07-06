@@ -6,12 +6,11 @@ class HomeView(ListView):
     model = post
     template_name = 'base.html'
 
-    def get_queryset(self):
-      return post
+    
 
 class NewsDetailView(DetailView):
     model = post
-    template_name = 'new_details.html'
+    template_name = 'news_details.html'
     
 
 class AddNewView(CreateView):

@@ -11,5 +11,5 @@ class post(models.Model):
         return self.title
 
 
-    def get_absoulte_url(self):
-        return reverse("news_details", args = (str(self.id)))
+    def get_absolute_url(self):
+        return reverse("news_detail", args = (str(self.id)))

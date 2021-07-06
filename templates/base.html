@@ -8,17 +8,23 @@
 </head>
 <body>
     <h3>NewLetter for me **</h3>
-    {% for post in object_list%}
-        <li>{{post.title}}-{{post.body}}
-
+    {% for post in object_list %}
+        <li>
+            <h3>{{post.title}}</h3>
+            <small>{{post.body}}</small>
         </li>
     {% endfor%}
-    <li>
-        <ul>
-            <a href="{% url 'addnews' %}">Add a Post</a>
-        </ul>
-    </li>
-    <li>
+    
         
-    </li>
+    <a  id="addpost" href="{% url 'addnews' %}">Add a Post</a>
+
+    
+    <style>
+        #addpost{
+            position: fixed;
+            top: 5%;
+            right: 5%;
+        }
+    </style>
+
 </html>
