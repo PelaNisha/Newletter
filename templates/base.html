@@ -9,10 +9,10 @@
 <body>
     <h3>NewLetter for me **</h3>
     {% for post in object_list %}
-        <li>
-            <h3>{{post.title}}</h3>
+        
+            <h4><a href="{% url 'news_detail' post.pk %}">{{post.title}}</a></h4>
             <small>{{post.body}}</small>
-        </li>
+        
     {% endfor%}
     
         
@@ -26,5 +26,6 @@
             right: 5%;
         }
     </style>
+</body>
 
 </html>
