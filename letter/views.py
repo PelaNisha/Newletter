@@ -17,6 +17,7 @@ class NewsDetailView(DetailView):
 class AddNewView(CreateView):
     model = post
     template_name = 'addpost.html'
+    
     fields = '__all__'
     
 

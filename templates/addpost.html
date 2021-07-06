@@ -10,7 +10,7 @@
     <h1>Add news</h1>
     <form action="" method="POST">
         {%csrf_token%}
-        {{forms.as_p}}
+        {{form.as_p}}
         <button>Post</button>
     </form>
     <a href="{% url 'home' %}">Back to home</a>
